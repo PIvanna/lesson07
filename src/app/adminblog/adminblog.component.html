@@ -1,0 +1,42 @@
+<div class="container">
+    <div id="nameBlog">Blog</div>
+    <div class="part-right">
+        <form id="formBlog">
+            <input [ngStyle]="{'borderColor': isColorTitle ? 'black' : 'red'}" class="inputForm" type="text" placeholder="Title here..." [(ngModel)]="inputTitle" name="inputTitle">
+            <input [ngStyle]="{'borderColor': isColorTextarea ? 'black' : 'red'}" id="inputTextarea" type="textarea" placeholder="Description here..." [(ngModel)]="inputTextarea"
+                name="inputTextarea">
+            <input [ngStyle]="{'borderColor': isColorAuthor ? 'black' : 'red'}" class="inputForm" type="text" placeholder="Author here..." [(ngModel)]="inputAuthor"
+                name="inputAuthor">
+            <button *ngIf="!editStatus" type="button" (click)="addBlog()" id="buttonAdd">Add</button>
+            <button *ngIf="editStatus" type="button" (click)="saveBlog()" id="buttonSave">Save edit</button>
+        </form>
+        <div>
+            <div class="table">
+                <div class="topTable">
+                    <div class="elementTable">#</div>
+                    <div class="elementTable">Title</div>
+                    <div class="elementTable">Text</div>
+                    <div class="elementTable">Author</div>
+                    <div class="elementTable">Edit</div>
+                    <div class="elementTable">Delete</div>
+                </div>
+                <div class="restTable" *ngFor="let blog of adminBlog; index as i ">
+                    <div class="elementTable">{{ i+1 }}</div>
+                    <div class="elementTable">{{ blog.title }}</div>
+                    <div class="elementTable">{{ blog.description | slice:0:10 }}
+                        <span *ngIf="blog.description.length > 10">...</span>
+                    </div>
+                    <div class="elementTable">{{ blog.author }}</div>
+                    <div class="elementTable">
+                        <button type="button" (click)="editBlog(blog)" style="background-color: yellow;"
+                        class="butMan">Edit</button>
+                    </div>
+                    <div class="elementTable">
+                        <button type="button" (click)="deleteBlog(blog)" style="background-color: red;"
+                        class="butMan">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

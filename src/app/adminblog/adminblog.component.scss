@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    margin: 20px auto;
+    padding: 40px;
+    justify-content: space-between;
+}
+
+#nameBlog{
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+}
+
+.part-right{
+    width: 80%;
+}
+
+#formBlog{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#buttonAdd{
+    width: 50px;
+    height: 30px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.inputForm{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid darkblue;
+    padding: 5px;
+}
+
+.inputForm::placeholder{
+    color: darkblue;
+}
+
+#inputTextarea{
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid darkblue;
+    padding: 5px;
+    height: 100px;
+}
+
+#inputTextarea::placeholder{
+    color: darkblue;
+}
+
+.table{
+    width: 100%;
+    min-height: 100px;
+    margin-top: 20px;
+}
+
+.topTable,
+.restTable{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    border-top: 1px solid darkblue;
+    border-bottom: 1px solid darkblue;
+}
+
+.elementTable{
+    width: 16.6%;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    font-style: bold;
+    color: darkblue;
+}
+
+
+.butMan{
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+
+#buttonSave{
+  width: 100px;
+  height: 30px;
+  color: black;
+  background-color: lavender;
+  border-radius: 10px;
+  border: none;
+}
